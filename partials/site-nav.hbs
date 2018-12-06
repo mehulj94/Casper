@@ -1,5 +1,5 @@
 <nav class="site-nav">
-    <div class="site-nav-left">
+    {{!--<div class="site-nav-left">
         {{^is "home"}}
             {{#if @blog.logo}}
                 <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
@@ -25,5 +25,15 @@
         {{else}}
             <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
         {{/if}}
+    </div>--}}
+    <div class="site-header-content">
+        <h1 class="site-title">
+            {{#if @blog.logo}}
+                <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+            {{else}}
+                {{@blog.title}}
+            {{/if}}
+        </h1>
+        <h2 class="site-description">{{@blog.description}}</h2>
     </div>
 </nav>
